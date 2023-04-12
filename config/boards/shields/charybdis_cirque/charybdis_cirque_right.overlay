@@ -6,11 +6,11 @@
 
 &kscan0 {
         col-gpios
-            = <&pro_micro 16 GPIO_ACTIVE_HIGH> // row 5  (0,5,R)
-            , <&pro_micro 14 GPIO_ACTIVE_HIGH> // row 6  (0,6,R)
-            , <&pro_micro 15 GPIO_ACTIVE_HIGH> // row 7  (0,7,R)
-            , <&pro_micro 18 GPIO_ACTIVE_HIGH> // row 8  (0,8,R)
-            , <&pro_micro 19 GPIO_ACTIVE_HIGH> // row 9  (0,9,R)
+            = <&pro_micro 16 GPIO_ACTIVE_HIGH> // col 5
+            , <&pro_micro 14 GPIO_ACTIVE_HIGH> // col 6
+            , <&pro_micro 15 GPIO_ACTIVE_HIGH> // col 7
+            , <&pro_micro 18 GPIO_ACTIVE_HIGH> // col 8
+            , <&pro_micro 19 GPIO_ACTIVE_HIGH> // col 9
             ;
 };
 
@@ -27,14 +27,13 @@
     trackball: trackball@0 {
         compatible = "pixart,pmw33xx";
         reg = <0>;
-        label = "Pixart PMW3360";
+        label = "Pixart PMW33xx";
         cs-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>; // P0.24
         motswk-gpios = <&gpio1 0 GPIO_ACTIVE_LOW>; // P1.00 = 32 + 0
         spi-max-frequency = <10000000>;
         cpi = <600>;
     };
 };
-*/
 
 &pro_micro_spi {
     status = "okay";
@@ -53,6 +52,7 @@
         scroll-layer = <5>;
     };
 };
+
 
 &pro_micro_spi {
     status = "okay";
@@ -73,3 +73,4 @@
         // no-taps;
     };
 };
+*/
