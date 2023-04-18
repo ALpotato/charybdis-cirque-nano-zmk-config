@@ -141,7 +141,7 @@
         layer_media {
             bindings = <
   &u_out_tog       &none  &kp C_VOL_UP       &none        &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&out OUT_BLE  &kp C_PREV  &kp C_VOL_DN  &kp C_NEXT  &bootloader   &bootloader    &bt BT_PRV    &bt BT_NXT         &none         &none
+&out OUT_BLE  &kp C_PREV  &kp C_VOL_DN  &kp C_NEXT  &bootloader   &bootloader    &bt BT_PRV    &bt BT_NXT    &bt BT_CLR         &none
        &none    &kp C_PP    &kp C_MUTE  &kp C_STOP        &none         &none         &none         &none         &none         &none
                                  &none       &none        &none         &none         &none
             >;
