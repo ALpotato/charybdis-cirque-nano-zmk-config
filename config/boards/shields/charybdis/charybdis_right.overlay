@@ -1,4 +1,4 @@
-#include "charybdis_cirque.dtsi"
+#include "charybdis.dtsi"
 
 &default_transform { // The matrix transform for this board is 5 columns over because the left half is 5 columns wide according to the matrix.
     col-offset = <5>;
@@ -14,14 +14,34 @@
             ;
 };
 
+&pro_micro_spi {
+    status = "okay";
+
+    miso-pin = <17>; // P0.17
+    mosi-pin = <20>; // P0.20
+    sck-pin = <22>; // P0.22
+    cs-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>; // P0.24
+
+    trackball: trackball@0 {
+        status = "okay";
+        compatible = "pixart,pmw3360";
+        reg = <0>;
+        label = "Pixart PMW3360";
+        irq-gpios = <&gpio1 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        spi-max-frequency = <2000000>;
+        scroll-layer = <5>;
+    };
+};
+
+/*
 &nice_nano_spi {
     status = "okay";
 };
+
 &trackpad {
     status = "okay";
 };
 
-/*
 &pro_micro_spi {
 	compatible = "nordic,nrf-spim";
     status = "okay";
@@ -41,26 +61,6 @@
         cpi = <600>;
     };
 };
-
-
-&pro_micro_spi {
-    status = "okay";
-
-    miso-pin = <17>; // P0.17
-    mosi-pin = <20>; // P0.20
-    sck-pin = <22>; // P0.22
-    cs-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>; // P0.24
-
-    trackball: trackball@0 {
-        compatible = "pixart,pmw3360";
-        reg = <0>;
-        label = "Pixart PMW3360";
-        irq-gpios = <&gpio1 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        spi-max-frequency = <2000000>;
-        scroll-layer = <5>;
-    };
-};
-
 
 &pro_micro_spi {
     compatible = "nordic,nrf-spim";
