@@ -1,47 +1,18 @@
 #include "tracktyl.dtsi"
 
-&default_transform { // The matrix transform for this board is 6 columns over because the left half is 6 columns wide according to the matrix.
+&default_transform { // The matrix transform for this board is 5 columns over because the left half is 5 columns wide according to the matrix.
     col-offset = <5>;
 };
 
 &kscan0 {
         col-gpios
-            = <&pro_micro 16 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 14 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 15 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 18 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 19 GPIO_ACTIVE_HIGH>
-            ;
-
-        row-gpios
-            = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
 };
-
-/*
-&pro_micro_spi {
-	compatible = "nordic,nrf-spim";
-    status = "okay";
-
-    miso-pin = <17>; // P0.17
-    mosi-pin = <20>; // P0.20
-    sck-pin = <22>; // P0.22
-    cs-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>; // P0.24
-
-    trackball: trackball@0 {
-        compatible = "pixart,pmw33xx";
-        reg = <0>;
-        label = "Pixart PMW3360";
-        cs-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>; // P0.24
-        motswk-gpios = <&gpio1 0 GPIO_ACTIVE_LOW>; // P1.00 = 32 + 0
-        spi-max-frequency = <10000000>;
-        cpi = <600>;
-    };
-};
-*/
 
 &pro_micro_spi {
     status = "okay";
