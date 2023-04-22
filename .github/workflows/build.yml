@@ -2,4 +2,4 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: EricDracula/zmk/.github/workflows/build-user-config.yml@dracula-test
+    uses: drorchen/zmk/.github/workflows/build-user-config.yml@trackball-support
