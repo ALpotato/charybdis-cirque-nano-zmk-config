@@ -1,11 +1,11 @@
 manifest:
   remotes:
     - name: zmk
-      url-base: https://github.com/drorchen
+      url-base: https://github.com/ALpotato
   projects:
     - name: zmk
       remote: zmk
-      revision: trackball-support
+      revision: ptdevice-alpotato
       import: app/west.yml
   self:
     path: config
