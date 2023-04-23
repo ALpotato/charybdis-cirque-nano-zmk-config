@@ -91,6 +91,7 @@
    &u_lt 6 Z             &kp X               &kp C          &kp V              &kp B          &kp N          &kp M            &kp COMMA            &kp DOT         &u_lt 6 SLASH
                                        &u_lt 5 ESC    &u_lt 2 TAB  &u_lt 4 BACKSPACE  &u_lt 3 ENTER  &u_lt 1 SPACE
             >;
+            trackball-bindings = <&tmv>;
         };
 
         layer_num {
@@ -100,6 +101,7 @@
        &kp NUMBER_1             &kp NUMBER_2               &kp NUMBER_3          &kp NUMBER_4   &kp NUMBER_5     &kp MINUS          &kp NUMBER_1                &kp NUMBER_2              &kp NUMBER_3              &kp NUMBER_0
                                                                 &kp ESC               &kp TAB  &kp BACKSPACE         &none                 &none
             >;
+            trackball-bindings = <&tsl>;
         };
 
         layer_nav {
@@ -109,6 +111,7 @@
 &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(Z))       &kp DEL    &kp DEL     &none      &none      &none
                           &none      &none          &none       &kp RET  &kp SPACE
             >;
+            trackball-bindings = <&tkp LC(TAB) LC(LS(TAB)) LG(PG_UP) LG(PG_DN)>;
         };
 
         layer_symb {
@@ -118,6 +121,7 @@
 &kp LS(PRCNT)  &kp LS(CARET)    &kp LS(LPAR)       &kp LS(RPAR)   &kp LS(AMPS)  &kp LS(STAR)  &kp LS(COLON)   &kp LS(LT)     &kp LS(GT)  &kp LS(QMARK)
                                 &kp LS(LPAR)       &kp LS(RPAR)        &kp SQT         &none          &none
             >;
+            trackball-bindings = <&tkp BSPC DELETE LC(MINUS) LC(PLUS)>;
         };
 
         layer_fn {
@@ -127,6 +131,7 @@
  &kp F16   &kp F17    &kp F18    &kp F19    &kp F20   &kp F21          &kp F22  &kp F23  &kp F24  &kp PAUSE_BREAK
                         &none      &none      &none  &kp SLCK  &kp PAUSE_BREAK
             >;
+            trackball-bindings = <&tkp_fast RIGHT LEFT DOWN UP>;
         };
 
         layer_pad {
@@ -136,6 +141,7 @@
 &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(Z))  &kp KP_ASTERISK      &kp N1     &kp N2     &kp N3       &kp RET
                           &none      &none          &none        &kp KP_N0  &kp KP_DOT
             >;
+            trackball-bindings = <&tmv_fine>;
         };
 
         layer_media {
@@ -146,5 +152,6 @@
                                  &none       &none        &none         &none         &none
             >;
         };
+        trackball-bindings = <&tmv_x>;
     };
 };
