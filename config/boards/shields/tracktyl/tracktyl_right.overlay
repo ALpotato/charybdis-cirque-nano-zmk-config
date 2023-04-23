@@ -1,0 +1,9 @@
+#include "tracktyl.dtsi"
+
+&nice_nano_spi {
+    status = "okay";
+};
+
+&trackball {
+    status = "okay";
+};
