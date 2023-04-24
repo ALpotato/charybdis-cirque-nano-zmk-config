@@ -1,13 +1,11 @@
 manifest:
   remotes:
-    - name: slicemk
-      url-base: https://github.com/slicemk
-    - name: luberry
-      url-base: https://github.com/luberry
+    - name: zmk
+      url-base: https://github.com/ALpotato
   projects:
     - name: zmk
-      remote: luberry
-      revision: pmw3389
+      remote: zmk
+      revision: ptdevice-alpotato
       import: app/west.yml
   self:
     path: config

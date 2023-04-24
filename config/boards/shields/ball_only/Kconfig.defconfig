@@ -1,0 +1,6 @@
+if SHIELD_BALL_ONLY
+
+    config ZMK_KEYBOARD_NAME
+        default "Ball_only"
+
+endif
